@@ -464,13 +464,13 @@ var situations =
             }
         },
         7: {
-            "enonce": "...",
+            "enonce": "Une voiture est garé devant chez vous depuis quelques heures et les passagers sont toujours à l'interieur. Quelles précautions prendre ?",
             "arguments": {
                 "1": {
-                    "enonce": "...",
+                    "enonce": "Relever la plaque du véhicules.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Grâce à cette plaque vous pourrez porter pleinte en cas de problème plus sérieux mais penser à relever le modele et la couleur peut aider la police à retrouver une personne",
                         "energiePenality": 0,
                         "moral": 5,
                         "equilibreAlim": 10,
@@ -485,10 +485,10 @@ var situations =
                     }
                 },
                 "2": {
-                    "enonce": "...",
+                    "enonce": "Relever le modèle du véhicule et sa couleur.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Grâce à c'est information vous pourrez décrire la voiture en cas de problème plus sérieux mais penser à relever la plaque du véhicule pour pouvoir retrouver le conducteur.",
                         "energiePenality": 0,
                         "moral": -5,
                         "equilibreAlim": -5,
@@ -503,10 +503,10 @@ var situations =
                     }
                 },
                 "3": {
-                    "enonce": "...",
+                    "enonce": "Appeler la police",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "La police sera quoi faire mais nous vous conseillons de relever la plaque et le modèle du véhicule afin de décrire au mieux la voiture qui vous pose problème. La police pourra alors faire patrouiller un véhicule proche de vous.",
                         "energiePenality": 0,
                         "moral": 10,
                         "equilibreAlim": -10,
@@ -521,10 +521,10 @@ var situations =
                     }
                 },
                 "4": {
-                    "enonce": "...",
+                    "enonce": "Aller les voires directement pour engager un dialogue.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "N'y allez seul, vous ne savez pas à qui vous avez à faire. Préférez relever l'identité du véhicule.",
                         "energiePenality": 0,
                         "moral": 0,
                         "equilibreAlim": 5,
@@ -541,13 +541,13 @@ var situations =
             }
         },
         8: {
-            "enonce": "...",
+            "enonce": "Vous recevez un e-mail de l'étranger un peu douteux, quelles précautions prendre ?",
             "arguments": {
                 "1": {
-                    "enonce": "...",
+                    "enonce": "S'assurer de la provenance du mail.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Vérifier que c'est un e-mail qui vous est familier ou professionnel sinon préférez-le mettre dans les spams et ne pas cliquer sûr d'éventuels liens",
                         "energiePenality": 0,
                         "moral": 5,
                         "equilibreAlim": 10,
@@ -562,10 +562,10 @@ var situations =
                     }
                 },
                 "2": {
-                    "enonce": "...",
+                    "enonce": "Ne pas prêter attention à un e-mail douteux.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Le moindre doute devrais vous faire placer cette e-mail dans les spams.",
                         "energiePenality": 0,
                         "moral": -5,
                         "equilibreAlim": -5,
@@ -580,10 +580,10 @@ var situations =
                     }
                 },
                 "3": {
-                    "enonce": "...",
+                    "enonce": "Ne pas cliquer sur les liens du e-mail",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Les pirates informatiques et autres danger du web commence par infiltrer votre ordinateur via un lien qui vous fait discrètement télécharger un petit logiciel invisible ou imite des plates-formes officiel pou récupérer vos identifiants de connexions, vous avez eu de bons réflexes mais ne pas y prêter attention et le placer dans les spams vous aurez economiser du temps.",
                         "energiePenality": 0,
                         "moral": 10,
                         "equilibreAlim": -10,
@@ -598,10 +598,10 @@ var situations =
                     }
                 },
                 "4": {
-                    "enonce": "...",
+                    "enonce": "Mettre dans les spams les e-mails douteux.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Tout e-mail indésirable ou douteux ou bien encore que vous ne connaissez pas devrait se retrouver ici afin d'être tranquille à l'avenir.",
                         "energiePenality": 0,
                         "moral": 0,
                         "equilibreAlim": 5,
@@ -618,13 +618,13 @@ var situations =
             }
         },
         9: {
-            "enonce": "...",
+            "enonce": "Une association vous appelle pour vous demander de faire un don quelles précautions prendre ?",
             "arguments": {
                 "1": {
-                    "enonce": "...",
+                    "enonce": "Contacter directement l'association par le numéro officiel",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "c'est le meilleur moyen d'être sur de bien faire car on vous expliquera ou et comment faire un don.",
                         "energiePenality": 0,
                         "moral": 5,
                         "equilibreAlim": 10,
@@ -639,10 +639,10 @@ var situations =
                     }
                 },
                 "2": {
-                    "enonce": "...",
+                    "enonce": "Ne pas donner d'information de paiement par téléphone.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "En général ne donner j'amais d'information de paiement par téléphone. Tous paiements passera par un autres moyen.",
                         "energiePenality": 0,
                         "moral": -5,
                         "equilibreAlim": -5,
@@ -657,10 +657,10 @@ var situations =
                     }
                 },
                 "3": {
-                    "enonce": "...",
+                    "enonce": "Vérifier ce que fait l'association de votre don.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "C'est une bonne chose de vérifier ceci mais ne le vérifier pas directement via cet appel préférer appeler le numéro officiel.",
                         "energiePenality": 0,
                         "moral": 10,
                         "equilibreAlim": -10,
@@ -675,10 +675,10 @@ var situations =
                     }
                 },
                 "4": {
-                    "enonce": "...",
+                    "enonce": "Pensez à demander une exoneration d'impôt sur votre don.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Non ce n'est pas correct même si ces possibles. préférer appeller directement le numéro officiel pour ce genre d'information.",
                         "energiePenality": 0,
                         "moral": 0,
                         "equilibreAlim": 5,
@@ -695,10 +695,10 @@ var situations =
             }
         },
         10: {
-            "enonce": "...",
+            "enonce": "On vous apporte un colis en demandant de signer un papier, mais il ne vous semble pas avoir commander, que faire ?",
             "arguments": {
                 "1": {
-                    "enonce": "...",
+                    "enonce": "Lui demander de vous donner un avis de passage.",
                     "energieNeeded": 0,
                     "success": {
                         "text": "...",
@@ -716,10 +716,10 @@ var situations =
                     }
                 },
                 "2": {
-                    "enonce": "...",
+                    "enonce": "Ne pas signer un papier inconnu",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Tous documents méritent une attention particulière car ceux-ci vous permettant de ne pas vous faire avoir, il est sensé d’écrire précisément les termes d’un accord et d’exposer les engagements ou accord cacher. Ne pas transmettre des données sensibles et ne pas accepter le colis est une bonne réponsses. ",
                         "energiePenality": 0,
                         "moral": -5,
                         "equilibreAlim": -5,
@@ -734,10 +734,10 @@ var situations =
                     }
                 },
                 "3": {
-                    "enonce": "...",
+                    "enonce": "Ne pas prendre le colis",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Si vous n'avez pas commender ou vous n'attender pas de colis ne pas prendre ce colis est un bon choix , si il ne vous est pas destiné c'est du vol et cela vous évitera des enuie par la suite.",
                         "energiePenality": 0,
                         "moral": 10,
                         "equilibreAlim": -10,
@@ -752,10 +752,10 @@ var situations =
                     }
                 },
                 "4": {
-                    "enonce": "...",
+                    "enonce": "Ne rien payer",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Toute livraison est payer en avance vous ne dever rien au livreur. demander lui de vous donner un avis de passage et vous pourez le récuperer dans un point relaie",
                         "energiePenality": 0,
                         "moral": 0,
                         "equilibreAlim": 5,
@@ -772,13 +772,13 @@ var situations =
             }
         },
         11: {
-            "enonce": "...",
+            "enonce": "On vous demande de régler par carte sur internet, quelle sont les précautions à prendre ?",
             "arguments": {
                 "1": {
-                    "enonce": "...",
+                    "enonce": "Eviter la CB comme moyen de paiement principal",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Il existe Paypal qui vous permet de faire opposition sur les achats internet plus facilement et permet de faire blocage si vous n'avez pas transféré d'argent dessus de manière à pas pouvoir être utilisé par une autre personne.",
                         "energiePenality": 0,
                         "moral": 5,
                         "equilibreAlim": 10,
@@ -793,10 +793,10 @@ var situations =
                     }
                 },
                 "2": {
-                    "enonce": "...",
+                    "enonce": "Prêter attention à l'orthographe.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Beaucoup de faux site comporte des fautes d'orthographe mais attention c'est de moins en moins le cas vaut mieux faire attention à d'autres détaille en plus de celui-là !",
                         "energiePenality": 0,
                         "moral": -5,
                         "equilibreAlim": -5,
@@ -811,10 +811,10 @@ var situations =
                     }
                 },
                 "3": {
-                    "enonce": "...",
+                    "enonce": "Vérifier que vous êtes redirigé vers votre banque au momment de payer.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Tout paiement en ligne vous redirige sur la plate-forme officielle de votre banque si elle ne s'affiche pas après avoir payé c'est que vous n'avez pas réellement payé mais que quelqu'un a pu voir les informations de votre carte. Vérifier tous les Detaille du site avant de rentrée c'est information.",
                         "energiePenality": 0,
                         "moral": 10,
                         "equilibreAlim": -10,
@@ -829,10 +829,10 @@ var situations =
                     }
                 },
                 "4": {
-                    "enonce": "...",
+                    "enonce": "S'assurer de la sécurité https entre vous et le site et sa réputation.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "le https ne vous certifie pas que vous ne serez pas piraté où vous faire voler vos données de paiement mais il certifie que personne ne peut le lire entre vous et le site internet, il est toujours bon de vérifier la réputation du site sur une simple recherche google éviter les liens sponsorisés et un page avis du même site.",
                         "energiePenality": 0,
                         "moral": 0,
                         "equilibreAlim": 5,
@@ -849,13 +849,13 @@ var situations =
             }
         },
         12: {
-            "enonce": "...",
+            "enonce": "Un numéro inconnu appele souvent à la même heure mais ne laisse aucun message et racroche quand vous décrochez.",
             "arguments": {
                 "1": {
-                    "enonce": "...",
+                    "enonce": "Bloque le numéro inconnue.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "c'est le meilleur moyen d'être tranquille, il se peut qu'on vous rappelle avec un autre numéro dans ce cas faite la même opération et ça finira par s'arrêter.",
                         "energiePenality": 0,
                         "moral": 5,
                         "equilibreAlim": 10,
@@ -870,10 +870,10 @@ var situations =
                     }
                 },
                 "2": {
-                    "enonce": "...",
+                    "enonce": "Ne pas répondre aux numéros inconnus.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "si vous répondez à ce genre de numéro il risque de vous rappeler plus souvent ce genre de technique est là pour savoir si le numéro décroche afin de vous démarcher au téléphone plus tard. Préféré bloque le numéro si ces appelles persister.",
                         "energiePenality": 0,
                         "moral": -5,
                         "equilibreAlim": -5,
@@ -888,10 +888,10 @@ var situations =
                     }
                 },
                 "3": {
-                    "enonce": "...",
+                    "enonce": "Ne pas rappeler le numéro inconnue.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Si vous rappelez vous aller payer c'est pour ça que ce numéro raccroche le plus souvent pour que vous rappeler et leur payer des fraies supplémentaire. Préféré bloque le numéro",
                         "energiePenality": 0,
                         "moral": 10,
                         "equilibreAlim": -10,
@@ -906,10 +906,10 @@ var situations =
                     }
                 },
                 "4": {
-                    "enonce": "...",
+                    "enonce": "Demander au bout du file de ne plus vous rappeler.",
                     "energieNeeded": 0,
                     "success": {
-                        "text": "...",
+                        "text": "Il ne faut pas décrocher préférer bloquer ce numéro-ci à l'autre bout du fil il y a un opérateur téléphonique cette astuce peut marcher mais pas dans cette situation.",
                         "energiePenality": 0,
                         "moral": 0,
                         "equilibreAlim": 5,
