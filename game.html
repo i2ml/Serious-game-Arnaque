@@ -286,8 +286,7 @@
                                             <div class="text-center">
                                                 <div class="card shadow mb-4">
                                                     <div class="card-header py-3">
-                                                        <h6 class="m-0 font-weight-bold text-primary">Evolution du
-                                                            poids</h6>
+                                                        <h6 class="m-0 font-weight-bold text-primary">Evolution de votre progression</h6>
                                                     </div>
                                                     <div class="card-body">
                                                         <div class="chart-area">
@@ -301,39 +300,30 @@
                                 </div>
                                 <div class="card shadow mx-5 mt-n3">
                                     <div class="card-body">
-                                        <h4 class="text-gray-900"><i class="fas fa-laugh fa-1x"></i>
-                                            Bien-être moral<span id="moralSpan" class="float-right small"></span>
+                                        <h4 class="text-gray-900"><i class="fas fa-street-view"></i>
+                                            Quotidien<span id="QuotidienSpan" class="float-right small"></span>
                                         </h4>
                                         <div class="progress mb-4">
-                                            <div id="moralBar" class="progress-bar bg-danger" role="progressbar"
+                                            <div id="QuotidienBar" class="progress-bar bg-danger" role="progressbar"
                                                  style="width: 20%"
                                                  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
-                                        <h4 class=" text-gray-900"><i class="fas fa-bolt fa-1x"></i> Énergie<span
-                                                id="energieSpan"
+                                        <h4 class=" text-gray-900"><i class="fas fa-phone-alt"></i> Téléphone<span
+                                                id="telephoneSpan"
                                                 class="float-right small"></span>
                                         </h4>
                                         <div class="progress mb-4">
-                                            <div id="energieBar" class="progress-bar bg-warning" role="progressbar"
+                                            <div id="telephoneBar" class="progress-bar bg-warning" role="progressbar"
                                                  style="width: 40%"
                                                  aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
-                                        <h4 class="text-gray-900"><i class="fas fa-notes-medical fa-1x"></i>
-                                            Bien-être physique<span id="santeSpan" class="float-right small"></span>
+                                        <h4 class="text-gray-900"><i class="fab fa-internet-explorer"></i>
+                                            Internet<span id="InternetSpan" class="float-right small"></span>
                                         </h4>
                                         <div class="progress mb-4">
-                                            <div id="santeBar" class="progress-bae bg-success" role="progressbar"
+                                            <div id="InternetBar" class="progress-bae bg-success" role="progressbar"
                                                  style="width: 50%"
                                                  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <h4 class="text-gray-900"><i class="fas fa-utensils fa-1x"></i> Équilibre
-                                            alimentaire<span
-                                                    id="equilibreAlimSpan" class="float-right small"></span>
-                                        </h4>
-                                        <div class="progress mb-4">
-                                            <div id="equilibreAlimBar" class="progress-bar bg-success"
-                                                 role="progressbar" style="width: 80%"
-                                                 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -660,15 +650,15 @@
                                     <div class="row m-5">
 
                                         <div class="col-xl-3 col-md-6 mb-4">
-                                            <div id="moralCard" class="card border-left-info shadow h-100 py-2">
+                                            <div id="quotidienCard" class="card border-left-info shadow h-100 py-2">
                                                 <div class="card-body">
                                                     <div class="row no-gutters align-items-center">
                                                         <div class="col mr-2">
-                                                            <div id="moralText"
+                                                            <div id="quotidienText"
                                                                  class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                                Bien-être moral
+                                                                quotidien
                                                             </div>
-                                                            <div id="moralValue"
+                                                            <div id="quotidienValue"
                                                                  class="h5 mb-0 font-weight-bold text-gray-800">XXXX
                                                             </div>
                                                         </div>
@@ -681,15 +671,15 @@
                                         </div>
 
                                         <div class="col-xl-3 col-md-6 mb-4">
-                                            <div id="energieCard" class="card border-left-info shadow h-100 py-2">
+                                            <div id="telephoneCard" class="card border-left-info shadow h-100 py-2">
                                                 <div class="card-body">
                                                     <div class="row no-gutters align-items-center">
                                                         <div class="col mr-2">
-                                                            <div id="energieText"
+                                                            <div id="telephoneText"
                                                                  class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                                Énergie
+                                                                Téléphone
                                                             </div>
-                                                            <div id="energieValue"
+                                                            <div id="telephoneValue"
                                                                  class="h5 mb-0 font-weight-bold text-gray-800">XXXX
                                                             </div>
                                                         </div>
@@ -702,17 +692,17 @@
                                         </div>
 
                                         <div class="col-xl-3 col-md-6 mb-4">
-                                            <div id="santeCard" class="card border-left-info shadow h-100 py-2">
+                                            <div id="InternetCard" class="card border-left-info shadow h-100 py-2">
                                                 <div class="card-body">
                                                     <div class="row no-gutters align-items-center">
                                                         <div class="col mr-2">
-                                                            <div id="santeText"
+                                                            <div id="InternetText"
                                                                  class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                                Bien-être physique
+                                                                Internet
                                                             </div>
                                                             <div class="row no-gutters align-items-center">
                                                                 <div class="col-auto">
-                                                                    <div id="santeValue"
+                                                                    <div id="InternetValue"
                                                                          class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
                                                                         XXXX
                                                                     </div>
@@ -721,28 +711,6 @@
                                                         </div>
                                                         <div class="col-auto">
                                                             <i class="fas fa-notes-medical fa-2x text-gray-300"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-md-6 mb-4">
-                                            <div id="equilibreAlimCard" class="card border-left-info shadow h-100 py-2">
-                                                <div class="card-body">
-                                                    <div class="row no-gutters align-items-center">
-                                                        <div class="col mr-2">
-                                                            <div id="equilibreAlimText"
-                                                                 class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                                Équilibre
-                                                                alimentaire
-                                                            </div>
-                                                            <div id="equilibreAlimValue"
-                                                                 class="h5 mb-0 font-weight-bold text-gray-800">XXXX
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <i class="fas fa-utensils fa-2x text-gray-300"></i>
                                                         </div>
                                                     </div>
                                                 </div>
