@@ -5,16 +5,18 @@ class Impact {
             this.text = situations[idSituation].arguments[idArgument].success.text
             this.imageUrl = situations[idSituation].arguments[idArgument].success.imageLink
             this.energiePenality = situations[idSituation].arguments[idArgument].success.energiePenality;
-            this.moral = situations[idSituation].arguments[idArgument].success.moral;
-            this.equilibreAlim = situations[idSituation].arguments[idArgument].success.equilibreAlim;
-            this.physique = situations[idSituation].arguments[idArgument].success.physique;
+
+            this.quotidien = situations[idSituation].arguments[idArgument].success.quotidien;
+            this.telephone = situations[idSituation].arguments[idArgument].success.telephone;
+            this.internet = situations[idSituation].arguments[idArgument].success.internet;
         } else {
             this.text = situations[idSituation].arguments[idArgument].failure.text
             this.imageUrl = situations[idSituation].arguments[idArgument].failure.imageLink
             this.energiePenality = situations[idSituation].arguments[idArgument].failure.energiePenality;
-            this.moral = situations[idSituation].arguments[idArgument].failure.moral;
-            this.equilibreAlim = situations[idSituation].arguments[idArgument].failure.equilibreAlim;
-            this.physique = situations[idSituation].arguments[idArgument].failure.physique;
+
+            this.quotidien = situations[idSituation].arguments[idArgument].failure.quotidien;
+            this.telephone = situations[idSituation].arguments[idArgument].failure.telephone;
+            this.internet = situations[idSituation].arguments[idArgument].failure.internet;
         }
     }
 }

@@ -53,6 +53,12 @@ class View {
         $("#santeValue").html(impact.physique);
         $("#equilibreAlimValue").html(impact.equilibreAlim);
 
+
+        $("#quotidienValue").html(impact.quotidien);
+        $("#telephoneValue").html(impact.telephone);
+        $("#InternetValue").html(impact.internet);
+        
+
         //reset colors
         let classes = ["border-left-danger", "border-left-success", "border-left-info", "text-danger", "text-success", "text-info"];
         $("#moralCard").removeClass(classes);

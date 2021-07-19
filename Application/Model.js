@@ -4,6 +4,7 @@ class Model {
         this.player = new Player();
         this.situation = new Situation(1);
         this.chart = getChart();
+        
         this.moralTeamName;
         this.equilibreTeamName;
     }
@@ -119,15 +120,15 @@ class Model {
     setDifficulty(difficulty) {
         if (difficulty === 'hard') {
             this.player.energie = 25;
-            this.player.moral = 30;
-            this.player.equilibreAlim = 40;
-            this.player.physique = 30;
+            this.player.quotidien = 30;
+            this.player.telephone = 40;
+            this.player.Internet = 30;
         }
         if (difficulty === 'easy') {
             this.player.energie = 65;
-            this.player.moral = 70;
-            this.player.equilibreAlim = 75;
-            this.player.physique = 70;
+            this.player.quotidien = 70;
+            this.player.telephone = 75;
+            this.player.Internet = 70;
         }
     }
 
