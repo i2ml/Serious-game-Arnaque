@@ -4,7 +4,6 @@ class Impact {
         if (isSuccess) {
             this.text = situations[idSituation].arguments[idArgument].success.text
             this.imageUrl = situations[idSituation].arguments[idArgument].success.imageLink
-            this.energiePenality = situations[idSituation].arguments[idArgument].success.energiePenality;
 
             this.quotidien = situations[idSituation].arguments[idArgument].success.quotidien;
             this.telephone = situations[idSituation].arguments[idArgument].success.telephone;
@@ -12,7 +11,6 @@ class Impact {
         } else {
             this.text = situations[idSituation].arguments[idArgument].failure.text
             this.imageUrl = situations[idSituation].arguments[idArgument].failure.imageLink
-            this.energiePenality = situations[idSituation].arguments[idArgument].failure.energiePenality;
 
             this.quotidien = situations[idSituation].arguments[idArgument].failure.quotidien;
             this.telephone = situations[idSituation].arguments[idArgument].failure.telephone;

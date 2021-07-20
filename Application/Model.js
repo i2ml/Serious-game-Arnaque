@@ -4,7 +4,7 @@ class Model {
         this.player = new Player();
         this.situation = new Situation(1);
         this.chart = getChart();
-        
+
         this.moralTeamName;
         this.equilibreTeamName;
     }
@@ -101,14 +101,9 @@ class Model {
      */
     applyArgument(argument) {
         let impact;
-        if (this.player.energie >= argument.energieNeeded) {
-            console.log("success of the argument");
-            impact = argument.success;
-        } else {
-            console.log("failure of the argument");
-            impact = argument.failure;
-        }
+        impact = argument.success;
         this.player.applyStats(impact);
+        console.log(impact)
         this.updateChart();
         this.disableInputs();
         return impact;
@@ -119,16 +114,14 @@ class Model {
      */
     setDifficulty(difficulty) {
         if (difficulty === 'hard') {
-            this.player.energie = 25;
             this.player.quotidien = 30;
             this.player.telephone = 40;
-            this.player.Internet = 30;
+            this.player.internet = 30;
         }
         if (difficulty === 'easy') {
-            this.player.energie = 65;
             this.player.quotidien = 70;
             this.player.telephone = 75;
-            this.player.Internet = 70;
+            this.player.internet = 70;
         }
     }
 

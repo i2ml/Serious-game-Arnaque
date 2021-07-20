@@ -30,7 +30,7 @@ var situations =
                             "energiePenality": 0,
                             "quotidien": 5,
                             "telephone": 5,
-                            "telephone": 5
+                            "internet": 5
                         },
                         "failure": {
                             "text": "Issue impossible",

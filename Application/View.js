@@ -36,92 +36,67 @@ class View {
      */
     displaySelectedArgument(argument, impact) {
 
-        let energieValue;
+        
         //display raw values
-        if (impact.moral >= 0) {
-            energieValue = impact.energiePenality + 5;
-            if (impact.moral > 0) { //additional bonus if moral is going up
-                energieValue += 5;
-            }
-        } else { //no bonus if moral is going up
-            energieValue = impact.energiePenality;
-        }
         $("#argEnonce").html(argument.enonce);
         $("#impactText").html(impact.text);
-        $("#moralValue").html(impact.moral);
-        $("#energieValue").html(energieValue);
-        $("#santeValue").html(impact.physique);
-        $("#equilibreAlimValue").html(impact.equilibreAlim);
-
 
         $("#quotidienValue").html(impact.quotidien);
         $("#telephoneValue").html(impact.telephone);
-        $("#InternetValue").html(impact.internet);
+        $("#internetValue").html(impact.internet);
         
 
         //reset colors
         let classes = ["border-left-danger", "border-left-success", "border-left-info", "text-danger", "text-success", "text-info"];
-        $("#moralCard").removeClass(classes);
-        $("#energieCard").removeClass(classes);
-        $("#santeCard").removeClass(classes);
-        $("#equilibreAlimCard").removeClass(classes);
-        $("#moralText").removeClass(classes);
-        $("#energieText").removeClass(classes);
-        $("#santeText").removeClass(classes);
-        $("#equilibreAlimText").removeClass(classes);
+        $("#quotidienCard").removeClass(classes);
+        $("#quotidienText").removeClass(classes);
+
+        $("#telephoneCard").removeClass(classes);
+        $("#telephoneText").removeClass(classes);
+
+        $("#internetCard").removeClass(classes);
+        $("#internetText").removeClass(classes);
 
         let bad = 0;
         //display color
-        if (impact.moral < 0) {
+        if (impact.quotidien < 0) {
             bad++;
-            $("#moralCard").addClass("border-left-danger");
-            $("#moralText").addClass("text-danger");
+            $("#quotidienCard").addClass("border-left-danger");
+            $("#quotidienText").addClass("text-danger");
         }
-        if (impact.moral > 0) {
-            $("#moralCard").addClass("border-left-success");
-            $("#moralText").addClass("text-success");
+        if (impact.quotidien > 0) {
+            $("#quotidienCard").addClass("border-left-success");
+            $("#quoidienText").addClass("text-success");
         }
-        if (impact.moral === 0) {
-            $("#moralCard").addClass("border-left-info");
-            $("#moralText").addClass("text-info");
+        if (impact.quotidien === 0) {
+            $("#quotidienCard").addClass("border-left-info");
+            $("#quotidienText").addClass("text-info");
         }
-        if (energieValue < 0) {
-            $("#energieCard").addClass("border-left-danger");
-            $("#energieText").addClass("text-danger");
-        }
-        if (energieValue > 0) {
-            $("#energieCard").addClass("border-left-success");
-            $("#energieText").addClass("text-success");
-        }
-        if (energieValue === 0) {
-            $("#energieCard").addClass("border-left-info");
-            $("#energieText").addClass("text-info");
-        }
-        if (impact.physique < 0) {
+        if (impact.telephone < 0) {
             bad++;
-            $("#santeCard").addClass("border-left-danger");
-            $("#santeText").addClass("text-danger");
+            $("#telephoneCard").addClass("border-left-danger");
+            $("#telephoneText").addClass("text-danger");
         }
-        if (impact.physique > 0) {
-            $("#santeCard").addClass("border-left-success");
-            $("#santeText").addClass("text-success");
+        if (impact.telephone > 0) {
+            $("#telephoneCard").addClass("border-left-success");
+            $("#telephoneText").addClass("text-success");
         }
-        if (impact.physique === 0) {
-            $("#santeCard").addClass("border-left-info");
-            $("#santeText").addClass("text-info");
+        if (impact.telephone === 0) {
+            $("#telephoneCard").addClass("border-left-info");
+            $("#telephoneText").addClass("text-info");
         }
-        if (impact.equilibreAlim < 0) {
+        if (impact.internet < 0) {
             bad++;
-            $("#equilibreAlimCard").addClass("border-left-danger");
-            $("#equilibreAlimText").addClass("text-danger");
+            $("#internetCard").addClass("border-left-danger");
+            $("#internetText").addClass("text-danger");
         }
-        if (impact.equilibreAlim > 0) {
-            $("#equilibreAlimCard").addClass("border-left-success");
-            $("#equilibreAlimText").addClass("text-success");
+        if (impact.internet > 0) {
+            $("#internetCard").addClass("border-left-success");
+            $("#internetText").addClass("text-success");
         }
-        if (impact.equilibreAlim === 0) {
-            $("#equilibreAlimCard").addClass("border-left-info");
-            $("#equilibreAlimText").addClass("text-info");
+        if (impact.internet === 0) {
+            $("#internetCard").addClass("border-left-info");
+            $("#internetText").addClass("text-info");
         }
 
         //basic arthur success/failure
@@ -157,92 +132,73 @@ class View {
     updatePlayerInfo(player) {
         let classes = ["bg-success", "bg-warning", "bg-danger", "text-success", "text-warning", "text-danger"];
         $("#note").removeClass(classes);
-        $("#moralBar").removeClass(classes);
-        $("#energieBar").removeClass(classes);
-        $("#santeBar").removeClass(classes);
-        $("#equilibreAlimBar").removeClass(classes);
-        if ($("#moralValue").text() < 0) {
-            $("#moralSpan").html(`<i class="fas fa-chevron-down"></i> En diminution.`);
+
+        $("#quotidienBar").removeClass(classes);
+        $("#telephoneBar").removeClass(classes);
+        $("#internetBar").removeClass(classes);
+
+        if ($("#quotidienValue").text() < 0) {
+            $("#quotidienSpan").html(`<i class="fas fa-chevron-down"></i> En diminution.`);
         }
-        if ($("#moralValue").text() === 0) {
-            $("#moralSpan").html(`<i class="fas fa-grip-lines"></i> Stable.`);
+        if ($("#quotidienValue").text() === 0) {
+            $("#quotidienSpan").html(`<i class="fas fa-grip-lines"></i> Stable.`);
         }
-        if ($("#moralValue").text() > 0) {
-            $("#moralSpan").html(`<i class="fas fa-chevron-up"></i> En augmentation.`);
+        if ($("#quotidienValue").text() > 0) {
+            $("#quotidienSpan").html(`<i class="fas fa-chevron-up"></i> En augmentation.`);
         }
-        if ($("#energieValue").text() < 0) {
-            $("#energieSpan").html(`<i class="fas fa-chevron-down"></i> En diminution.`);
+        if ($("#telephoneValue").text() < 0) {
+            $("#telephoneSpan").html(`<i class="fas fa-chevron-down"></i> En diminution.`);
         }
-        if ($("#energieValue").text() === 0) {
-            $("#energieSpan").html(`<i class="fas fa-grip-lines"></i> Stable.`);
+        if ($("#telephoneValue").text() === 0) {
+            $("#telephoneSpan").html(`<i class="fas fa-grip-lines"></i> Stable.`);
         }
-        if ($("#energieValue").text() > 0) {
-            $("#energieSpan").html(`<i class="fas fa-chevron-up"></i> En augmentation.`);
+        if ($("#telephoneValue").text() > 0) {
+            $("#telephoneSpan").html(`<i class="fas fa-chevron-up"></i> En augmentation.`);
         }
-        if ($("#santeValue").text() < 0) {
-            $("#santeSpan").html(`<i class="fas fa-chevron-down"></i> En diminution.`);
+        if ($("#internetValue").text() < 0) {
+            $("#internetSpan").html(`<i class="fas fa-chevron-down"></i> En diminution.`);
         }
-        if ($("#santeValue").text() === 0) {
-            $("#santeSpan").html(`<i class="fas fa-grip-lines"></i> Stable.`);
+        if ($("#internetValue").text() === 0) {
+            $("#internetSpan").html(`<i class="fas fa-grip-lines"></i> Stable.`);
         }
-        if ($("#santeValue").text() > 0) {
-            $("#santeSpan").html(`<i class="fas fa-chevron-up"></i> En augmentation.`);
-        }
-        if ($("#equilibreAlimValue").text() < 0) {
-            $("#equilibreAlimSpan").html(`<i class="fas fa-chevron-down"></i> En diminution.`);
-        }
-        if ($("#equilibreAlimValue").text() === 0) {
-            $("#equilibreAlimSpan").html(`<i class="fas fa-grip-lines"></i> Stable.`);
-        }
-        if ($("#equilibreAlimValue").text() > 0) {
-            $("#equilibreAlimSpan").html(`<i class="fas fa-chevron-up"></i> En augmentation.`);
+        if ($("#internetValue").text() > 0) {
+            $("#internetSpan").html(`<i class="fas fa-chevron-up"></i> En augmentation.`);
         }
 
         let bad = 0;
         let good = 0;
-        if (player.moral < 40) {
+        if (player.quotidien < 40) {
             bad++;
-            $("#moralBar").addClass("bg-danger").css({width: player.moral + '%'});
+            $("#quotidienBar").addClass("bg-danger").css({width: player.quotidien + '%'});
         }
-        if (player.moral >= 40 && player.moral <= 60) {
-            $("#moralBar").addClass("bg-warning").css({width: player.moral + '%'});
+        if (player.quotidien >= 40 && player.quotidien <= 60) {
+            $("#quotidienBar").addClass("bg-warning").css({width: player.quotidien + '%'});
         }
-        if (player.moral > 60) {
+        if (player.quotidien > 60) {
             good++;
-            $("#moralBar").addClass("bg-success").css({width: player.moral + '%'});
-        }
-        if (player.energie < 40) {
-            bad++;
-            $("#energieBar").addClass("bg-danger").css({width: player.energie + '%'});
-        }
-        if (player.energie >= 40 && player.energie <= 60) {
-            $("#energieBar").addClass("bg-warning").css({width: player.energie + '%'});
-        }
-        if (player.energie > 60) {
-            good++;
-            $("#energieBar").addClass("bg-success").css({width: player.energie + '%'});
+            $("#quotidienBar").addClass("bg-success").css({width: player.quotidien + '%'});
         }
         if (player.physique < 40) {
             bad++;
-            $("#santeBar").addClass("bg-danger").css({width: player.physique + '%'});
+            $("#telephoneBar").addClass("bg-danger").css({width: player.telephone + '%'});
         }
-        if (player.physique >= 40 && player.physique <= 60) {
-            $("#santeBar").addClass("bg-warning").css({width: player.physique + '%'});
+        if (player.telephone >= 40 && player.telephone <= 60) {
+            $("#telephoneBar").addClass("bg-warning").css({width: player.telephone + '%'});
         }
-        if (player.physique > 60) {
+        if (player.telephone > 60) {
             good++;
-            $("#santeBar").addClass("bg-success").css({width: player.physique + '%'});
+            $("#telephoneBar").addClass("bg-success").css({width: player.telephone + '%'});
         }
-        if (player.equilibreAlim < 40) {
+        if (player.internet < 40) {
             bad++;
-            $("#equilibreAlimBar").addClass("bg-danger").css({width: player.equilibreAlim + '%'});
+            $("#internetBar").addClass("bg-danger").css({width: player.internet + '%'});
         }
-        if (player.equilibreAlim >= 40 && player.equilibreAlim <= 60) {
-            $("#equilibreAlimBar").addClass("bg-warning").css({width: player.equilibreAlim + '%'});
+        if (player.internet >= 40 && player.internet <= 60) {
+            $("#internetBar").addClass("bg-warning").css({width: player.internet + '%'});
         }
-        if (player.equilibreAlim > 60) {
+        if (player.internet > 60) {
             good++;
-            $("#equilibreAlimBar").addClass("bg-success").css({width: player.equilibreAlim + '%'});
+            $("#internetBar").addClass("bg-success").css({width: player.internet + '%'});
         }
         if (bad > 0) {
             $("#profilIllu").attr("src", "img/faces/Triste.png");
