@@ -8,18 +8,25 @@ class View {
     displaySituation(situation) {
         const progress = (situation.id) * (100 / 12);
         console.log("progress is :" + progress)
+
         $("#mainBar").css({width: progress + '%'});
         $(".border-primary").removeClass("border");
         $("#enonce").html(situation.enonce);
         $(".situationIllu").attr("src", "img/situations/" + situation.id + ".png");
         $("input").prop("checked", false);
-        for (const argumentId in situation.arguments) {
+
+        for (const argumentId in situation.arguments) 
+        {
             $(".argumentList" + argumentId).empty();
             $('<h5/>', {
                 'class': 'argumentText text-gray-900 m-0',
                 'text': situation.arguments[argumentId].enonce,
             }).appendTo('.argumentList' + argumentId);
         }
+
+        // $("#quotidienValue").html(impact.quotidien);
+        // $("#telephoneValue").html(impact.telephone);
+        // $("#internetValue").html(impact.internet);
     }
 
     /**

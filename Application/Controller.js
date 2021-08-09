@@ -10,6 +10,7 @@ class Controller {
     startGame() {
         console.log("Serious-game démarre");
         this.view.displaySituation(this.model.situation);
+        app.view.updatePlayerInfo(app.model.player);
     }
 }
 
