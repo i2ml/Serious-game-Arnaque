@@ -3,7 +3,6 @@ class Model {
     constructor() {
         this.player = new Player();
         this.situation = new Situation(1);
-        this.chart = getChart();
 
         this.moralTeamName;
         this.equilibreTeamName;
@@ -26,9 +25,6 @@ class Model {
         this.situation = new Situation(idSituationToLoad);
     }
 
-    /**
-     * Allow to add the current weight to the chart
-     */
     updateChart() {
         const months = ['Janvier',
             'Février',
@@ -42,8 +38,7 @@ class Model {
             'Octobre',
             'Novembre',
             'Décembre'];
-        this.chart.data.labels.push(months[this.situation.id - 1]);
-        this.chart.update();
+     
     }
 
     /**

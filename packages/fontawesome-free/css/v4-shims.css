@@ -180,20 +180,6 @@
 .fa.fa-arrows-h:before {
   content: "\f337"; }
 
-.fa.fa-bar-chart {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 400; }
-
-.fa.fa-bar-chart:before {
-  content: "\f080"; }
-
-.fa.fa-bar-chart-o {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 400; }
-
-.fa.fa-bar-chart-o:before {
-  content: "\f080"; }
-
 .fa.fa-twitter-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400; }
@@ -1410,15 +1396,6 @@
 
 .fa.fa-eyedropper:before {
   content: "\f1fb"; }
-
-.fa.fa-area-chart:before {
-  content: "\f1fe"; }
-
-.fa.fa-pie-chart:before {
-  content: "\f200"; }
-
-.fa.fa-line-chart:before {
-  content: "\f201"; }
 
 .fa.fa-lastfm {
   font-family: 'Font Awesome 5 Brands';
