@@ -53,7 +53,6 @@ $("#nameSelected").click(function () {
  */
 $(document).on('click', 'input', function () {
     const inputList = $("input");
-    let first = 0, second = 0;
     for (const key in inputList) {
         if (inputList.hasOwnProperty(key)) {
             const element = inputList[key];
@@ -62,13 +61,6 @@ $(document).on('click', 'input', function () {
             }
         }
     }
-    if (app.model.moralIsLocked()) {
-        second = 1;
-    }
-    if (app.model.equilibreIsLocked()) {
-        first = 1;
-    }
-    (first > 0 && second > 0) ? $("#valider").removeClass("disabled") : $("#valider").addClass("disabled");
 });
 
 $(document).on('click', '.border-primary', function () {

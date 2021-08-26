@@ -38,39 +38,7 @@ class Model {
             'Octobre',
             'Novembre',
             'Décembre'];
-     
-    }
 
-    /**
-     * Rend le controle à l'équipe ene difficulté
-     */
-    disableInputs() {
-        if (this.player.getPoints() > 1) {
-            //la team équilibre alim est dans le mal
-            $(".moralInput").attr("disabled", true)
-        } else {
-            $(".moralInput").attr("disabled", false)
-        }
-        if (this.player.getPoints() < -1) {
-            //la team moral alim est dans le mal
-            $(".equilibreInput").attr("disabled", true)
-        } else {
-            $(".equilibreInput").attr("disabled", false)
-        }
-    }
-
-    /**
-     * Renvoi vrai si l'équipe équilibre est bloquée
-     */
-    equilibreIsLocked() {
-        return $(".equilibreInput").filter(":disabled").length > 2
-    }
-
-    /**
-     * Revoi vrai si l'équipe moral est bloquée
-     */
-    moralIsLocked() {
-        return $(".moralInput").filter(":disabled").length > 2
     }
 
     /**
@@ -100,7 +68,6 @@ class Model {
         this.player.applyStats(impact);
         console.log(impact)
         this.updateChart();
-        this.disableInputs();
         return impact;
     }
 
