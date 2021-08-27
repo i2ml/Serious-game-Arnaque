@@ -3,9 +3,9 @@ class Model {
     constructor() {
         this.player = new Player();
         this.situation = new Situation(1);
-
         this.moralTeamName;
         this.equilibreTeamName;
+        this.difficulty;
     }
 
     /**
@@ -42,7 +42,7 @@ class Model {
     }
 
     /**
-     * Choisi aléatoirement un argument parmis ceux selectionnés.
+     * Choisi aléatoirement un argument parmi ceux sélectionnés.
      */
     choseFinalArgumentId() {
         const inputList = $("input")
@@ -56,6 +56,26 @@ class Model {
                 }
             }
         }
+        let argument;
+        switch (this.difficulty) {
+            case "hard" :
+                argumentsList.forEach(argument => argument.score = (argument.success.quotidien + argument.success.telephone + argument.success.internet));
+                console.log(argumentsList);
+                argument = argumentsList[0]
+                break;
+            case "easy" :
+                break;
+            default :
+                argument = this.chooseRandomArgumentFromList(argumentsList);
+                break;
+        }
+        return argument;
+    }
+
+    /**
+     * Get a random argument from the list of argument
+     */
+    chooseRandomArgumentFromList(argumentsList) {
         return argumentsList[Math.floor(Math.random() * argumentsList.length)];
     }
 
@@ -69,22 +89,6 @@ class Model {
         console.log(impact)
         this.updateChart();
         return impact;
-    }
-
-    /**
-     * Read and apply difficulty
-     */
-    setDifficulty(difficulty) {
-        if (difficulty === 'hard') {
-            this.player.quotidien = 30;
-            this.player.telephone = 40;
-            this.player.internet = 30;
-        }
-        if (difficulty === 'easy') {
-            this.player.quotidien = 70;
-            this.player.telephone = 75;
-            this.player.internet = 70;
-        }
     }
 
 }

@@ -81,14 +81,22 @@ $(document).on('click', '.border-primary', function () {
  * change player values if game is set to hard
  */
 $("#hard").click(function () {
-    app.model.setDifficulty('hard');
+    app.model.difficulty = "hard";
 })
 
 /**
  * change player value if game is set to easy
  */
 $("#easy").click(function () {
-    app.model.setDifficulty('easy');
+    app.model.difficulty = "easy";
+})
+
+
+/**
+ * change player value if game is set to easy
+ */
+$("#normal").click(function () {
+    app.model.difficulty = "normal";
 })
 
 /**
