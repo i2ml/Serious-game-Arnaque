@@ -53,6 +53,7 @@ $("#nameSelected").click(function () {
  */
 $(document).on('click', 'input', function () {
     const inputList = $("input");
+    let first = 0, second = 0;
     for (const key in inputList) {
         if (inputList.hasOwnProperty(key)) {
             const element = inputList[key];
@@ -61,6 +62,7 @@ $(document).on('click', 'input', function () {
             }
         }
     }
+    (first > 0 && second > 0) ? $("#valider").removeClass("disabled") : $("#valider").addClass("disabled");
 });
 
 $(document).on('click', '.border-primary', function () {
