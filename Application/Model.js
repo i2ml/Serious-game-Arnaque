@@ -57,19 +57,77 @@ class Model {
             }
         }
         let argument;
+        let scoredArgumentsList = this.calculateScoredArgumentList(argumentsList);
         switch (this.difficulty) {
             case "hard" :
-                argumentsList.forEach(argument => argument.score = (argument.success.quotidien + argument.success.telephone + argument.success.internet));
-                console.log(argumentsList);
-                argument = argumentsList[0]
+                argumentsList =[];
+                let min = this.getMinScoreFromScoredList(scoredArgumentsList);
+                scoredArgumentsList.forEach(scoredArgument => {
+                        if (min === scoredArgument[1])
+                            argumentsList.push(scoredArgument[0]);
+                    }
+                );
+                console.log(argumentsList)
+                argument = this.chooseRandomArgumentFromList(argumentsList);
                 break;
             case "easy" :
+                argumentsList =[];
+                let max = this.getMaxScoreFromScoredList(scoredArgumentsList);
+                scoredArgumentsList.forEach(scoredArgument => {
+                        if (max === scoredArgument[1])
+                            argumentsList.push(scoredArgument[0]);
+                    }
+                );
+                console.log(argumentsList)
+                argument = this.chooseRandomArgumentFromList(argumentsList);
                 break;
             default :
                 argument = this.chooseRandomArgumentFromList(argumentsList);
                 break;
         }
         return argument;
+    }
+
+    /**
+     * get the smallest score from the list
+     */
+    getMinScoreFromScoredList(scoredArgumentsList) {
+        let min = 99999;
+        scoredArgumentsList.forEach(scoredArgument => {
+                if (min > scoredArgument[1])
+                    min = scoredArgument[1];
+            }
+        );
+        return min;
+    }
+
+    /**
+     * get the biggest score from the list
+     */
+    getMaxScoreFromScoredList(scoredArgumentsList) {
+        let max = -99999;
+        scoredArgumentsList.forEach(scoredArgument => {
+                if (max < scoredArgument[1])
+                    max = scoredArgument[1];
+            }
+        );
+        return max;
+    }
+
+    /**
+     * Generate a list with a score for each impact possible for each argument. The score is high if the impact is positive.
+     */
+    calculateScoredArgumentList(argumentsList) {
+        let scoredArgumentsList = [];
+        argumentsList.forEach(argument => scoredArgumentsList.push(
+            [
+                argument,
+                (new Impact(this.situation.id, argument, true).quotidien
+                    + new Impact(this.situation.id, argument, true).telephone
+                    + new Impact(this.situation.id, argument, true).internet)
+            ]
+        ));
+        return scoredArgumentsList;
     }
 
     /**
