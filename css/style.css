@@ -39,3 +39,8 @@
 .situationIlluTop {
 	max-width: 200px;
 }
+
+.bold{
+	font-size: xx-large;
+	font-weight: bold;
+}
